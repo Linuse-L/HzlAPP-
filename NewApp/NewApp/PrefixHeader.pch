@@ -1,0 +1,24 @@
+//
+//  PrefixHeader.pch
+//  NewApp
+//
+//  Created by L on 15/9/21.
+//  Copyright (c) 2015年 NewApp. All rights reserved.
+//
+
+#define NewApp_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+
+#import "ConstantUI.h"
+#import "AppDelegate.h"
+#import "UIImageView+WebCache.h"
+#import "Interface.h"
+#import "LORequestManger.h"
+#import "Singleton.h"
+#import "MJPhoto.h"
+#import "MobClick.h"
+
+#endif

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SCCreateController">
+            <connections>
+                <outlet property="collectionView" destination="ogK-3L-8Ni" id="GVv-GU-gL6"/>
+                <outlet property="selectView" destination="J9s-eF-7Kt" id="ZAo-Gp-bSE"/>
+                <outlet property="tapView" destination="VCt-h9-d25" id="JXY-Nd-EON"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J9s-eF-7Kt">
+                    <rect key="frame" x="0.0" y="64" width="80" height="504"/>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.95294117647058818" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="Dza-Mm-u8e"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VCt-h9-d25">
+                    <rect key="frame" x="80" y="64" width="240" height="42"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xy9-FQ-nhZ">
+                            <rect key="frame" x="8" y="41" width="224" height="1"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="CdJ-TO-1On"/>
+                                <constraint firstAttribute="height" constant="1" id="Jng-gQ-hpz"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Xy9-FQ-nhZ" secondAttribute="bottom" id="FdT-EC-0Zy"/>
+                        <constraint firstAttribute="height" constant="42" id="WuF-5D-Jf2"/>
+                        <constraint firstAttribute="trailing" secondItem="Xy9-FQ-nhZ" secondAttribute="trailing" constant="8" id="p6P-x5-PGd"/>
+                        <constraint firstItem="Xy9-FQ-nhZ" firstAttribute="leading" secondItem="VCt-h9-d25" secondAttribute="leading" constant="8" id="q7C-oo-pO5"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ogK-3L-8Ni">
+                    <rect key="frame" x="80" y="114" width="240" height="454"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="TmW-nF-xb3">
+                        <size key="itemSize" width="70" height="100"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="6" minY="0.0" maxX="6" maxY="5"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="uvE-fa-W6u"/>
+                        <outlet property="delegate" destination="-1" id="nPz-lT-Z84"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ogK-3L-8Ni" secondAttribute="trailing" id="AGu-uN-Qac"/>
+                <constraint firstAttribute="trailing" secondItem="VCt-h9-d25" secondAttribute="trailing" id="E71-E8-3g6"/>
+                <constraint firstItem="J9s-eF-7Kt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="F0x-N4-B8E"/>
+                <constraint firstAttribute="bottom" secondItem="ogK-3L-8Ni" secondAttribute="bottom" id="Ha9-MB-YDN"/>
+                <constraint firstAttribute="bottom" secondItem="J9s-eF-7Kt" secondAttribute="bottom" id="KLS-ig-1Mp"/>
+                <constraint firstItem="ogK-3L-8Ni" firstAttribute="top" secondItem="VCt-h9-d25" secondAttribute="bottom" constant="8" id="R09-i8-mI2"/>
+                <constraint firstItem="J9s-eF-7Kt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SDr-vJ-nxT"/>
+                <constraint firstItem="ogK-3L-8Ni" firstAttribute="leading" secondItem="J9s-eF-7Kt" secondAttribute="trailing" id="Zbu-BJ-LH3"/>
+                <constraint firstItem="VCt-h9-d25" firstAttribute="leading" secondItem="J9s-eF-7Kt" secondAttribute="trailing" id="tpZ-Rs-cJW"/>
+                <constraint firstItem="VCt-h9-d25" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="xcd-H9-lgz"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="296" y="212"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
